@@ -1,12 +1,10 @@
+
 import javax.swing.JOptionPane;
 
 public class Ativ_Valiativa02 {
-
+// ESSTE TA EM FORMATO DE UM TELA/JANELA
 	public static void main(String[] args) {
-		double valorB = 80;
-	    double valorI = 120; 
-	    double valorA =180;
-	    double valorV =250;
+		double valorB = 80, valorI = 120, valorA = 180 ,valorV = 250;
 		double desconto, dia;
 		String op;
 		dia = Double.parseDouble(JOptionPane.showInputDialog("Quando dias do 3,7 e 10 dias ate o pagamento: "));
@@ -20,65 +18,61 @@ public class Ativ_Valiativa02 {
 		switch (op){
         case "Básico":
             if(dia <=3 ) {
-            	desconto = valorB *0.88;
+            	desconto = valorB - (valorB *0.12);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
             }else if(dia >3 && dia <= 7) {
-            	desconto = valorB * 0.93;
+            	desconto = valorB - (valorB * 0.07);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
 
-            }else if(dia >7) {
-            	desconto = valorB * 0.97;
+            }else if(dia >7 && dia <=10) {
+            	desconto = valorB - (valorB * 0.03);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
 
-            }else if (dia > 10) {
-            	JOptionPane.showMessageDialog(null, "Após do dia 10 nao tem desconto \n valor Bruto é:"+valorB);
+            }else {
+            	JOptionPane.showMessageDialog(null, "Sem desconto \nvalor á pagar : R$ "+valorB);
             }
     break;
         case"Intermediário":
         	if(dia <= 3) {
-        		desconto = valorI * 0.88;
+        		desconto = valorI - (valorI * 0.12);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
         	}else if(dia >3 && dia <= 7) {
-        		desconto = valorI * 0.93;
+        		desconto = valorI - (valorI * 0.07);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 7) {
-        		desconto = valorI * 0.97;
+        	}else if(dia >7 && dia <=10) {
+        		desconto = valorI - (valorI * 0.03);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 10) {
-        		
-            	JOptionPane.showMessageDialog(null,"Sem desconto: "+valorI);
-        	}
-        	
+        	}else {
+            	JOptionPane.showMessageDialog(null, "Sem desconto \nvalor á pagar : R$ "+valorI);
+            }
         break;
         case"Avançado":
         	if(dia <= 3) {
-        		desconto = valorA * 0.88;
+        		desconto = valorA - (valorA * 0.12);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
         	}else if(dia >3 && dia <= 7) {
-        		desconto = valorA * 0.93;
+        		desconto = valorA - (valorA * 0.07);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 7) {
-        		desconto = valorA * 0.97;
+        	}else if(dia >7 && dia <=10) {
+        		desconto = valorA - (valorA * 0.03);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 10) {
-        		
-            	JOptionPane.showMessageDialog(null,"Sem desconto: "+valorA);
-        	}
+        	}else {
+            	JOptionPane.showMessageDialog(null, "Sem desconto \nvalor á pagar : R$ "+valorA);
+            }
         break;
         case "VIP":
         	if(dia <= 3) {
-        		desconto = valorV * 0.88;
+        		desconto = valorV - (valorV * 0.12);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
         	}else if(dia >3 && dia <= 7) {
-        		desconto = valorV * 0.93;
+        		desconto = valorV - (valorV * 0.07);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 7) {
-        		desconto = valorV * 0.97;
+        	}else if(dia >7 && dia <=10) {
+        		desconto = valorV - (valorV * 0.03);
             	JOptionPane.showMessageDialog(null,"Com desconto: "+desconto);
-        	}else if(dia > 10) {
-            	JOptionPane.showMessageDialog(null,"Sem desconto: "+valorV);
-        	}
-        	
+        	}else {
+            	JOptionPane.showMessageDialog(null, "Sem desconto \nvalor á pagar : R$ "+valorV);
+            }
 	    }
 
    }
